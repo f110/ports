@@ -4,15 +4,16 @@ Portfile collections for me.
 
 # Usage
 
-Get repository
+First time, You need to clone the repository and edit the config file for macports.
+After the second time, You only need to sync it.
+
+Clone the repository.
 
 ```
 $ git clone https://github.com/f110/ports.git
-$ cd ports
-$ portindex
 ```
 
-Update sources.conf
+Add this repository to /opt/local/macports/sources.conf
 
 ```
 $ vi /opt/local/etc/macports/sources.conf
