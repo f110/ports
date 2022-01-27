@@ -3,11 +3,11 @@
 PortSystem 1.0
 PortGroup  golang 1.0
 
-go.setup   github.com/bitnami/kubecfg 0.22.0 v
+go.setup   github.com/kubecfg/kubecfg 0.24.1 v
 revision   0
 
 name             kubecfg
-homepage         https://github.com/bitnami/kubecfg
+homepage         https://github.com/kubecfg/kubecfg
 description      A tool for managing complex enterprise Kubernetes environments as code.
 long_description kubecfg allows you to express the patterns across your infrastructure and \
     reuse these powerful "templates" across many services, and then manage those templates \
@@ -21,7 +21,7 @@ checksums           rmd160  429e1e525355e0dd9a8240ce8c9ae9ff18648b8b \
 
 categories      sysutils
 platforms       darwin
-supported_archs x86_64, arm64
+supported_archs x86_64 arm64
 installs_libs   no
 
 build.cmd        make
