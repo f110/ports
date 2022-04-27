@@ -3,7 +3,7 @@
 PortSystem 1.0
 PortGroup  golang 1.0
 
-go.setup   github.com/kubecfg/kubecfg 0.24.1 v
+go.setup   github.com/kubecfg/kubecfg 0.26.0 v
 revision   0
 
 name             kubecfg
@@ -15,9 +15,9 @@ long_description kubecfg allows you to express the patterns across your infrastr
     gain from using kubecfg. objects through ownersReferences on them.
 license          Apache-2.0
 
-checksums           rmd160  808e4a24079d91ed6a84aeefa4b42f28fbc10b9f \
-                    sha256  4c01e924ac90a43cc0857e27a94f0dff903561a50fa439ee56f2760831ef5f9c \
-                    size    268064
+checksums           rmd160  f0dfa68de7f98847399f064aa8930d39483db97e \
+                    sha256  322ed2b6d4214bafac63ee3d666aa240b077a0949d68bc97e5b6dfc484345b7e \
+                    size    266525
 
 categories      sysutils
 platforms       darwin
