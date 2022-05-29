@@ -15,9 +15,9 @@ long_description kubecfg allows you to express the patterns across your infrastr
     gain from using kubecfg. objects through ownersReferences on them.
 license          Apache-2.0
 
-checksums           rmd160  f0dfa68de7f98847399f064aa8930d39483db97e \
-                    sha256  322ed2b6d4214bafac63ee3d666aa240b077a0949d68bc97e5b6dfc484345b7e \
-                    size    266525
+checksums           rmd160  78ae01d3118432bda1cfeb6f0cc407a3a124e1cb \
+                    sha256  ae2a07a3ae1baf2412ae4d24942e8a26519d8ae8202b769485e96ee93c8d63f3 \
+                    size    266548
 
 categories      sysutils
 platforms       darwin
