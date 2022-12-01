@@ -1,0 +1,28 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+
+PortSystem          1.0
+PortGroup           golang 1.0
+
+go.setup            github.com/etcd-io/etcd 3.5.6 v
+categories          databases
+license             Apache-2.0
+description         Distributed reliable key-value store for the most critical data of a distributed system
+homepage            https://github.com/x-motemen/ghq
+
+long_description    Distributed reliable key-value store for the most critical data of a distributed system
+
+revision            0
+
+build.cmd           make
+build.target        build
+build.env-delete    GO111MODULE=off GOPROXY=off
+
+destroot {
+    xinstall -m 0755 ${worksrcpath}/bin/etcd ${destroot}${prefix}/bin/
+    xinstall -m 0755 ${worksrcpath}/bin/etcdctl ${destroot}${prefix}/bin/
+    xinstall -m 0755 ${worksrcpath}/bin/etcdutl ${destroot}${prefix}/bin/
+}
+
+checksums           rmd160  59b25da3f3f0b0502ef31d841fa0cf9853c3a44a \
+                    sha256  175eb6b4a2455b56ab134ac6758b0378d0b079b5024342b177924ac5562a3d4b \
+                    size    4066653
