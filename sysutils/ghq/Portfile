@@ -3,7 +3,7 @@
 PortSystem          1.0
 PortGroup           golang 1.0
 
-go.setup            github.com/f110/ghq 33d96cee29bb8614324cddd6a44694691cbddb09
+go.setup            github.com/f110/ghq 4ca28e7fa0f73ef961a909d56c3901fa417b452b
 categories          sysutils
 license             MIT
 description         Remote repository management made easy
