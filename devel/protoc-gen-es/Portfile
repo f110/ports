@@ -1,0 +1,25 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+
+PortSystem          1.0
+PortGroup           npm 1.0
+
+name                protoc-gen-es
+version             2.2.3
+revision            0
+npm.rootname        @bufbuild/protoc-gen-es
+distname            protoc-gen-es-${version}
+
+categories          devel
+license             Apache-2
+platforms           any
+supported_archs     noarch
+maintainers         openmaintainer
+
+description         Protocol Buffers for ECMAScript. The only JavaScript Protobuf library that is fully-compliant with Protobuf conformance tests.
+long_description    A complete implementation of Protocol Buffers in TypeScript, suitable for web browsers and Node.js, created by Buf.
+
+homepage            https://github.com/bufbuild/protobuf-es
+
+checksums           rmd160  38a166ccf54fa99de045a4785ed6fe46589f2402 \
+                    sha256  8b21112e102f34596bf76bddcfa5ae42dbd37b14b5f46cf556d6035907f67dbb \
+                    size    7144
