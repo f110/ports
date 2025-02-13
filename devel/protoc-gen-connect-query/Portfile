@@ -15,10 +15,11 @@ platforms           any
 supported_archs     noarch
 maintainers         openmaintainer
 
-description         TypeScript & JavaScript Language Server
-long_description    Language Server Protocol implementation for TypeScript wrapping tsserver.
+description         TypeScript-first expansion pack for TanStack Query that gives you Protobuf superpowers.
+long_description    The code generator for Connect-Query, a expansion pack for TanStack Query (react-query), \
+                    that enables effortless communication with servers that speak the Connect Protocol.
 
-homepage            https://github.com/typescript-language-server/typescript-language-server
+homepage            https://github.com/connectrpc/connect-query-es
 
 checksums           rmd160  7edd7251edfe2234febb7026ef90df34dce82f0a \
                     sha256  77aefb504017bb1bb98436da41653420c4a550242084f2a7dd6a12db7bf47bce \
