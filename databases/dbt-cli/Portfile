@@ -1,0 +1,42 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+
+PortSystem          1.0
+
+name                dbt-cli
+version             0.40.16
+revision            0
+
+categories          databases
+license             Restrictive NoMirror
+maintainers         nomaintainer
+supported_archs     x86_64 arm64
+platforms           darwin
+
+description         dbt Labs' CLI for dbt Cloud
+long_description    The dbt Cloud CLI is a closed-source command line tool \
+                    built for dbt Cloud users to offer a functional \
+                    equivalent to the open-source dbt core.
+
+homepage            https://github.com/dbt-labs/dbt-cli
+
+master_sites        https://github.com/dbt-labs/dbt-cli/releases/download/v${version}/
+distname            dbt_${version}_darwin_all
+
+extract.mkdir       yes
+
+checksums           rmd160  8891f0ce3ed93b8bdb991303c090d5f064a4df26 \
+                    sha256  dc37c1db73fb770fa46d699ed43640bec259839cd7fb6b4f4d378b723313c9f8 \
+                    size    8900807
+
+use_configure       no
+build               {}
+
+conflicts           dbt
+
+destroot {
+    xinstall -m 0755 ${worksrcpath}/dbt ${destroot}${prefix}/bin/dbt
+}
+
+livecheck.type      regex
+livecheck.url       https://github.com/dbt-labs/dbt-cli/releases.atom
+livecheck.regex     /tag/v(\[\\d.\]+)
