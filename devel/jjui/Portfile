@@ -3,7 +3,7 @@
 PortSystem          1.0
 PortGroup           golang 1.0
 
-go.setup            github.com/idursun/jjui 0.10.6 v
+go.setup            github.com/idursun/jjui 0.10.7 v
 go.offline_build    no
 revision            0
 
@@ -19,9 +19,9 @@ license             MIT
 maintainers         {gmail.com:herby.gillot @herbygillot} \
                     openmaintainer
 
-checksums           rmd160  d941310e6195d7da9b1fb6064f34d174e71610c4 \
-                    sha256  8d5d8f73958b6bc0493ebfbbbf5dbb6035eb72d4ee1e84488b34d51f9c3a372e \
-                    size    248595
+checksums           rmd160  f64cfd70ac82c85f73c4b287b30fb630d4db6bdf \
+                    sha256  87fd894a2272d91ad7a4576f0d44cfd161421c3a242e1e91f84c40b6357e27bb \
+                    size    261840
 
 depends_run         port:jujutsu
 
