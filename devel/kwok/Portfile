@@ -1,0 +1,47 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+
+PortSystem          1.0
+PortGroup           golang 1.0
+
+go.setup            github.com/kubernetes-sigs/kwok 0.8.0 v
+go.offline_build    no
+github.tarball_from archive
+revision            0
+
+description         KWOK is a toolkit that enables setting up a cluster of \
+                    thousands of Nodes in seconds
+
+long_description    KWOK \(Kubernetes WithOut Kubelet\) is a toolkit that \
+                    enables setting up a cluster of thousands of Nodes in \
+                    seconds. Under the scene, all Nodes are simulated to \
+                    behave like real ones, so the overall approach employs a \
+                    pretty low resource footprint that you can easily play \
+                    around on your laptop.
+
+homepage            https://kwok.sigs.k8s.io/
+
+categories          devel
+installs_libs       no
+license             Apache-2.0
+maintainers         nomaintainer
+
+supported_archs     x86_64 arm64
+
+checksums           rmd160  f64bd2628179f2b5dd4fdb8d334fe2ca3c602d34 \
+                    sha256  6b0ee90f5288e73b440e3724bcbafba6988016aa85bd93f32c474c3a1bffbe4f \
+                    size    1119991
+
+set _build_path     ${worksrcpath}/build
+
+build.pre_args-append \
+    -trimpath -o ${_build_path} \
+    -ldflags \"-s -w -X sigs.k8s.io/kwok/pkg/consts.Version=${version}\"
+build.args          ./cmd/...
+
+pre-build {
+    file mkdir ${_build_path}
+}
+
+destroot {
+    xinstall -m 0755 {*}[glob ${_build_path}/*] ${destroot}${prefix}/bin/
+}
