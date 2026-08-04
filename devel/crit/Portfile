@@ -3,7 +3,7 @@
 PortSystem          1.0
 PortGroup           golang 1.0
 
-go.setup            github.com/tomasz-tomczyk/crit 0.18.0 v
+go.setup            github.com/tomasz-tomczyk/crit 0.18.3 v
 go.offline_build    no
 github.tarball_from archive
 revision            0
@@ -25,9 +25,9 @@ maintainers         nomaintainer
 platforms           darwin
 supported_archs     x86_64 arm64
 
-checksums           rmd160  3353790c43558724faace986fecfb36b4e5d0a94 \
-                    sha256  29e7d262282f7e6a7b4efbf4d0b43a738333370d07df67f6f5be944752f4be6d \
-                    size    5416487
+checksums           rmd160  04c88ec1f16dfcec14897223575ee5f4e482070b \
+                    sha256  1211e3d293c8665c9b23cd79e6d94fe527162b9157025d720f7d1643866932c9 \
+                    size    5642893
 
 build.pre_args-append \
     -ldflags \"-s -w -X main.version=${version}\"
