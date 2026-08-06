@@ -1,0 +1,32 @@
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -65,14 +65,9 @@
+ find_package(wangle CONFIG REQUIRED)
+ include_directories(${WANGLE_INCLUDE_DIR})
+ 
+-find_package(FBThrift CONFIG REQUIRED COMPONENTS cpp2 py)
++find_package(FBThrift CONFIG REQUIRED COMPONENTS cpp2)
+ include_directories(${FBTHRIFT_INCLUDE_DIR})
+ 
+-find_package(GMock MODULE REQUIRED)
+-include_directories(${GMOCK_INCLUDEDIR} ${LIBGMOCK_INCLUDE_DIR})
+-include(GoogleTest)
+-enable_testing()
+-
+ add_subdirectory(eden/common/os)
+ add_subdirectory(eden/common/telemetry)
+ add_subdirectory(eden/common/testharness)
+--- eden/common/os/CMakeLists.txt
++++ eden/common/os/CMakeLists.txt
+@@ -42,4 +42,3 @@
+   DESTINATION ${INCLUDE_INSTALL_DIR}/eden/common/os
+ )
+ 
+-add_subdirectory(test)
+--- eden/common/utils/CMakeLists.txt
++++ eden/common/utils/CMakeLists.txt
+@@ -74,4 +74,3 @@
+   DESTINATION ${INCLUDE_INSTALL_DIR}/eden/common/utils/windows
+ )
+ 
+-add_subdirectory(test)
