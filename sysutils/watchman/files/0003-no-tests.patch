@@ -1,0 +1,39 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -139,11 +139,6 @@
+ set(PACKAGE_TARNAME   "${PACKAGE_NAME}-${PACKAGE_VERSION}")
+ set(PACKAGE_BUGREPORT "https://github.com/facebook/watchman/issues")
+ project(${PACKAGE_NAME} CXX C)
+-
+-find_package(GMock MODULE REQUIRED)
+-include_directories(${GMOCK_INCLUDEDIR} ${LIBGMOCK_INCLUDE_DIR})
+-include(GoogleTest)
+-enable_testing()
+ 
+ include(FBThriftCppLibrary)
+ include(CheckFunctionExists)
+@@ -445,7 +440,6 @@
+   ")
+   include(FBPythonBinary)
+   add_subdirectory(watchman/python)
+-  add_subdirectory(watchman/integration)
+ endif()
+ 
+ if(Python3_Interpreter_FOUND AND NODE AND YARN)
+@@ -769,16 +763,6 @@
+ set(tests)
+ # Helper function to define a unit test executable
+ function(t_test NAME)
+-  add_executable(${NAME}.t ${ARGN})
+-  target_link_libraries(
+-    ${NAME}.t
+-    testsupport wildmatch third_party_deps
+-    ${LIBGMOCK_LIBRARIES}
+-  )
+-  target_compile_definitions(${NAME}.t
+-    PUBLIC WATCHMAN_TEST_SRC_DIR=\"${CMAKE_CURRENT_SOURCE_DIR}\")
+-  gtest_discover_tests(${NAME}.t DISCOVERY_TIMEOUT 60)
+-  list(APPEND tests ${NAME}.t)
+ endfunction()
+ 
+ # The `check` target runs the unit tests

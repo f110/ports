@@ -1,0 +1,23 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -369,14 +369,12 @@
+ find_package(fmt CONFIG REQUIRED)
+ find_package(folly CONFIG REQUIRED)
+ 
+-if (ENABLE_EDEN_SUPPORT)
+-  find_package(fizz CONFIG REQUIRED)
+-  find_package(wangle CONFIG REQUIRED)
+-  find_package(FBThrift CONFIG REQUIRED)
+-  find_package(fb303 CONFIG REQUIRED)
+-  find_package(cpptoml CONFIG REQUIRED)
+-  include_directories(${FB303_INCLUDE_DIR})
+-endif()
++find_package(fizz CONFIG REQUIRED)
++find_package(wangle CONFIG REQUIRED)
++find_package(FBThrift CONFIG REQUIRED)
++find_package(fb303 CONFIG REQUIRED)
++find_package(cpptoml CONFIG REQUIRED)
++include_directories(${FB303_INCLUDE_DIR})
+ if(DEFINED ENV{NODE_BIN})
+   set(NODE $ENV{NODE_BIN})
+ else()
