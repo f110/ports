@@ -4,14 +4,15 @@ PortSystem              1.0
 PortGroup               github 1.0
 PortGroup               openssl 1.0
 
-github.setup            AGWA git-crypt 0.7.0
+github.setup            AGWA git-crypt 0.8.0
+github.tarball_from     archive
 homepage                https://www.agwa.name/projects/git-crypt/
 categories              devel
 platforms               darwin
 maintainers             @nareshov openmaintainer
 license                 {GPL-3+ OpenSSLException}
-checksums               rmd160  c6db08fe5d107b372fc456b4bd0b21fb9cae6fdc \
-                        sha256  e3b396243b7b777d33f38000e09ea23cbbfc6c4237272216613f9d1b5021bae6
+checksums               rmd160  ba573de628d44aecbd446de3770d760b37fc7d91 \
+                        sha256  786199c24f8b79a54d62b98c24b1113606c4ebd83125e642b228704686305e69
 
 description             {Transparent file encryption in git.}
 long_description        git-crypt enables transparent encryption and \
@@ -28,12 +29,6 @@ long_description        git-crypt enables transparent encryption and \
                         repository.
 
 compiler.cxx_standard   2011
-
-# temporary, just to avoid
-# crypto-openssl-10.cpp:78:11: error: field has incomplete type 'HMAC_CTX' (aka 'hmac_ctx_st')
-openssl.branch          1.1
-configure.cxxflags-append \
-    "-I${openssl_cache_incdir}"
 
 depends_build-append    bin:xsltproc:libxslt \
                         port:docbook-xsl-nons
