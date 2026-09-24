@@ -4,8 +4,7 @@ PortSystem              1.0
 PortGroup               muniversal 1.0
 
 name                    memcached
-version                 1.6.15
-revision                1
+version                 1.6.45
 description             A high performance, distributed memory object caching system.
 long_description        Memcached is a high-performance, distributed memory object \
                         caching system, generic in nature, but intended for use in \
@@ -19,13 +18,11 @@ installs_libs           no
 homepage                https://memcached.org/
 master_sites            ${homepage}files/
 
-checksums               rmd160  f19517e6ac7ae14bd40f6a81c091c91d942f2d3c \
-                        sha256  8d7abe3d649378edbba16f42ef1d66ca3f2ac075f2eb97145ce164388e6ed515 \
-                        size    1051109
+checksums               rmd160  9c03357ec04da1c9affbce92823d4723240d6214 \
+                        sha256  d362c64e6d8d5287153501eabf7c85b4a761432fbf53f5d7b085d0bb1653c1dd \
+                        size    1272659
 
-configure.args          --with-libevent=${prefix} \
-                        ac_cv_search_umem_cache_create=no \
-                        ac_cv_header_umem_h=no
+configure.args          --with-libevent=${prefix}
 
 depends_lib             port:libevent
 
@@ -44,12 +41,5 @@ if {${universal_possible} && [variant_isset universal]} {
 variant sasl description {enable SASL authentication} {
     configure.args-append   --enable-sasl
 }
-
-variant umem description {enable libumem support} {
-    depends_lib-append      port:umem
-    configure.args-delete   ac_cv_search_umem_cache_create=no
-    configure.args-delete   ac_cv_header_umem_h=no
-}
-
 livecheck.type  regex
 livecheck.regex ${name}-(\\d+(?:\\.\\d+){2,})\\.
