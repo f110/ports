@@ -4,7 +4,7 @@ PortSystem          1.0
 PortGroup           npm 1.0
 
 name                protoc-gen-es
-version             1.3.1
+version             2.16.0
 revision            0
 npm.rootname        @bufbuild/protoc-gen-es
 distname            protoc-gen-es-${version}
@@ -20,6 +20,6 @@ long_description    A complete implementation of Protocol Buffers in TypeScript,
 
 homepage            https://github.com/bufbuild/protobuf-es
 
-checksums           rmd160  58edc3786f36e3a2e8dbfffc9517cecf77241818 \
-                    sha256  2c8c27aad1bd4c8d45e8926c9d976188016652128bde83bf33175a4ff57810e2 \
-                    size    22101
+checksums           rmd160  d5383ce7ae53fbfe8f7b5259ca8e83c2fc1e42ee \
+                    sha256  d4d2b2cf817ed02af5ad793af35c7c6f465848f601e8f750acfcc060f062c85c \
+                    size    11528
