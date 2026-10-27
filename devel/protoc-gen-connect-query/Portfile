@@ -4,7 +4,7 @@ PortSystem          1.0
 PortGroup           npm 1.0
 
 name                protoc-gen-connect-query
-version             0.4.4
+version             2.3.1
 revision            0
 npm.rootname        @connectrpc/protoc-gen-connect-query
 distname            protoc-gen-connect-query-${version}
@@ -21,6 +21,6 @@ long_description    The code generator for Connect-Query, a expansion pack for T
 
 homepage            https://github.com/connectrpc/connect-query-es
 
-checksums           rmd160  9ebf55b91e173326a01cbebcdf3f8df8e22c7a0e \
-                    sha256  6799885df8292e4c287174b15770ef544b3cce116c955814f3be1de3b49c8a03 \
-                    size    11693
+checksums           rmd160  9359a32298b11b6f2b0cccb8c65a40bc0a9ebcbe \
+                    sha256  7d8e9a4b652aec153fce0109d3397ff29d0dc8559e3fcba895dac382ad83d2c5 \
+                    size    5207
