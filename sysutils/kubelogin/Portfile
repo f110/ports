@@ -3,7 +3,7 @@
 PortSystem 1.0
 PortGroup  golang 1.0
 
-go.setup   github.com/int128/kubelogin 1.32.2 v
+go.setup   github.com/int128/kubelogin 1.36.4 v
 revision   0
 github.tarball_from archive
 
@@ -13,9 +13,9 @@ description      kubectl plugin for Kubernetes OpenID Connect authentication (ku
 long_description This is a kubectl plugin for Kubernetes OpenID Connect (OIDC) authentication, also known as kubectl oidc-login.
 license          Apache-2.0
 
-checksums           rmd160  815992860d38c95b2ce4b310fb22cd47f7399ad0 \
-                    sha256  8ea8abeb811d0c6b243a56c9eb19bea8c8e587fe4899d58df83893aed39e20be \
-                    size    152937
+checksums           rmd160  721b23114be2807609f58b574eea68350179187a \
+                    sha256  ddae6975006895791d0bbf8464f228b3911f697b869446fdf1b8233c12c30544 \
+                    size    150898
 
 platforms       darwin
 categories      sysutils
