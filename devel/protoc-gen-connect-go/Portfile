@@ -3,7 +3,7 @@
 PortSystem 1.0
 PortGroup  golang 1.0
 
-go.setup   github.com/connectrpc/connect-go 1.18.1 v
+go.setup   github.com/connectrpc/connect-go 2.0.2 v
 revision   0
 github.tarball_from archive
 
@@ -12,16 +12,16 @@ homepage         https://github.com/connectrpc/connect-go
 description      protoc-gen-connect-go is a plugin for the Protobuf compiler that generates Go code.
 license          Apache-2.0
 
-checksums           rmd160  4bbd3a0afd60ea02044613ead971cc23ffc9b3a0 \
-                    sha256  c1fe8b12f1090e2dbc0e1d2f510883f95304594bb621923de1c0aead30cac46c \
-                    size    181512
+checksums           rmd160  e2673cf7e9dda02b7d23729be3eb51ed4689ace0 \
+                    sha256  8464897edaa45bb8b665986c2e5b60b2c05dd91c78b2007dda102055d5987cf9 \
+                    size    408653
 
 categories      sysutils
 platforms       darwin
 supported_archs x86_64 arm64
 installs_libs   no
 
-build.target     connectrpc.com/connect/cmd/protoc-gen-connect-go
+build.target     connectrpc.com/connect/v2/cmd/protoc-gen-connect-go
 build.env-delete GO111MODULE=off GOPROXY=off
 
 destroot {
