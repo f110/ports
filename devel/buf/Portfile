@@ -3,7 +3,7 @@
 PortSystem 1.0
 PortGroup  golang 1.0
 
-go.setup   github.com/bufbuild/buf 1.50.0 v
+go.setup   github.com/bufbuild/buf 1.75.0 v
 revision   0
 github.tarball_from archive
 
@@ -13,9 +13,9 @@ description      The best way of working with Protocol Buffers.
 long_description The buf CLI is the best tool for working with Protocol Buffers.
 license          Apache-2.0
 
-checksums           rmd160  7da6ecd025faf3f85566c9a5521f5191c84a0275 \
-                    sha256  8ef886f4793bc76abc91da41a2ab87666bb5bfef86ddbb95e7f8240b8978c1df \
-                    size    1604031
+checksums           rmd160  4a517702f34e9062e97e59508d66926aec3e701a \
+                    sha256  e1b688283938b19ff072789d37f371e9bdfbc866ebb719b20c1f1bdc4a9ca8ff \
+                    size    1989091
 
 categories      sysutils
 platforms       darwin
