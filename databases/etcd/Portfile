@@ -3,7 +3,7 @@
 PortSystem          1.0
 PortGroup           golang 1.0
 
-go.setup            github.com/etcd-io/etcd 3.5.6 v
+go.setup            github.com/etcd-io/etcd 3.7.3 v
 categories          databases
 license             Apache-2.0
 description         Distributed reliable key-value store for the most critical data of a distributed system
@@ -23,6 +23,6 @@ destroot {
     xinstall -m 0755 ${worksrcpath}/bin/etcdutl ${destroot}${prefix}/bin/
 }
 
-checksums           rmd160  59b25da3f3f0b0502ef31d841fa0cf9853c3a44a \
-                    sha256  175eb6b4a2455b56ab134ac6758b0378d0b079b5024342b177924ac5562a3d4b \
-                    size    4066653
+checksums           rmd160  77834bbd9c2f2ab87a485b86259938f6982edd5c \
+                    sha256  38455879fd3744d9aec12f45e890bede61df8b2323279e2c895bbb1bd484681f \
+                    size    7468665
